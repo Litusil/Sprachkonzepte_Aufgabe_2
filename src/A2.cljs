@@ -16,6 +16,9 @@
                            prod
                   (recur (- x 1) (* x prod)))
                  ))
+(defn facIt [n] (
+                  reduce *(take n (iterate inc 1))
+                  ))
 
 
-(println (facLR 5))
+(println (facIt 5))
